@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,7 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Storefinder_fragment extends Fragment implements OnMapReadyCallback{
+public class Storefinder_fragment extends Fragment implements OnMapReadyCallback {
 
     @Nullable
     @Override
@@ -31,13 +33,19 @@ public class Storefinder_fragment extends Fragment implements OnMapReadyCallback
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment fragment=(SupportMapFragment)getChildFragmentManager().findFragmentById(R.id.map);
+        SupportMapFragment fragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         fragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng marker=new LatLng(-121.973743, 37.554028);
+        LatLng marker = new LatLng(37.478633, -121.923939);
         googleMap.addMarker(new MarkerOptions().title("home").position(marker));
+        CameraUpdate point = CameraUpdateFactory.newLatLng(new LatLng(37.478633, -121.923939));
+
+// moves camera to coordinates
+        googleMap.moveCamera(point);
+// animates camera to coordinates
+        googleMap.animateCamera(point);
     }
 }
