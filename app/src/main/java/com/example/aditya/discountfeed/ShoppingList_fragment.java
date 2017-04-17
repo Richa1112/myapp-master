@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ShoppingList_fragment extends ListFragment  implements AdapterView.OnItemClickListener  {
+public class  ShoppingList_fragment extends ListFragment  implements AdapterView.OnItemClickListener  {
     private ArrayList<String> list = new ArrayList<String>();
     private ArrayAdapter<String> allItemsAdapter;
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,6 @@ public class CustomGridFav extends BaseAdapter {
     public CustomGridFav(Context c, ArrayList<StoreModel> storeList) {
         mContext = c;
 
-        //filter
 
         ArrayList<StoreModel> favList = new ArrayList<StoreModel>();
 
@@ -78,6 +78,20 @@ public class CustomGridFav extends BaseAdapter {
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             //    textView.setText(web[position]);
             imageView.setImageResource(storeData.image);
+
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                                    Toast.makeText(mContext, "You Clicked at " + storeList.get(position).getStoreName(), Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
+
+
 
 
         } else {

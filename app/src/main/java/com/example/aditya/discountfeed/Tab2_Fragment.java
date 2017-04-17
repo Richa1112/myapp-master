@@ -69,13 +69,13 @@ public class Tab2_Fragment extends Fragment {
 
         grid.setAdapter(adapter);
 
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(getActivity(), "You Clicked at " + storeList.get(position).getStoreName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,
+//                                    int position, long id) {
+//                Toast.makeText(getActivity(), "You Clicked at " + storeList.get(position).getStoreName(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         return view;
     }
