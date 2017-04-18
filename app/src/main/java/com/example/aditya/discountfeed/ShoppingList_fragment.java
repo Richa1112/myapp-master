@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class  ShoppingList_fragment extends ListFragment  implements AdapterView.OnItemClickListener  {
+public class ShoppingList_fragment extends ListFragment implements AdapterView.OnItemClickListener {
     private ArrayList<String> list = new ArrayList<String>();
     private ArrayAdapter<String> allItemsAdapter;
 
@@ -37,57 +37,23 @@ public class  ShoppingList_fragment extends ListFragment  implements AdapterView
         return view;
     }
 
-//
+    //
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-//            Button button = (Button) getView().findViewById(R.id.addItem);
-//
-//        ArrayList<String> item = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.brands)));
-//        ;
-//        allItemsAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(), android.R.layout.simple_list_item_1, item);
-//        ListFragment.setListAdapter(allItemsAdapter);
 
-    ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
-            R.array.brands, android.R.layout.simple_list_item_1);
-    setListAdapter(adapter);
-    getListView().setOnItemClickListener(this);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.brands, android.R.layout.simple_list_item_1);
+        setListAdapter(adapter);
+        getListView().setOnItemClickListener(this);
     }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        int p = position+1;
-        Toast.makeText(getActivity(), "Item: " +p, Toast.LENGTH_SHORT).show();
+        int p = position + 1;
+        Toast.makeText(getActivity(), "Item: " + p, Toast.LENGTH_SHORT).show();
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    public void onClick(View v) {
-//        EditText edit = (EditText) getView().findViewById(R.id.editText);
-//        list.add(edit.getText().toString());
-//        edit.setText("");
-//        allItemsAdapter.notifyDataSetChanged();
-//    }
-
 
 }
 

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "nike",
+    "url": "http://store.nike.com/us/en_us/pw/clearance/47?st=sale:male",
+    "imageUrl": "http://logok.org/wp-content/uploads/2014/03/Nike-logo-+-wordmark.png"
+  },
+  {
+    "name": "Walmart",
+    "url": "https://www.walmart.com/store/2989/weekly-ads",
+    "imageUrl": "https://news.bitcoin.com/wp-content/uploads/2016/05/Walmart-logo.png"
+  },
+  {
+    "name": "Macys",
+    "url": "https://www.macys.com/shop/for-the-home/spring-spectacular-sale?id=42021&cm_sp=us_hdr-_-home-_-42021_spring-spectacular-sale_COL4",
+    "imageUrl": "http://christineandjim.com/images/macys-logo.png"
+  },
+  {
+    "name": "Target",
+    "url": "http://www.target.com/c/clearance/-/N-5q0ga",
+    "imageUrl": "https://i.ytimg.com/vi/RW3UYQED1bE/maxresdefault.jpg"
+  },
+  {
+    "name": "Adidas",
+    "url": "http://www.adidas.com/us/men-sale",
+    "imageUrl": "https://suppastore-rancher.s3.amazonaws.com/brands/thumbnail/36/adidas-black_1.png"
+  },
+  {
+    "name": "Walgreens",
+    "url": "https://www.walgreens.com/offers/offers.jsp?view=weeklyad#/weeklyad",
+    "imageUrl": "http://visitoxfordms.com/wp-content/uploads/Walgreens.jpg"
+  }
+]

@@ -16,20 +16,15 @@ import java.util.ArrayList;
 public class Tab1_Fragment extends Fragment {
     GridView grid;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_1_fragment, container, false);
-
         ArrayList<StoreModel> storeList = StoreController.getInstance();
-
-
         CustomGrid adapter = new CustomGrid(this.getActivity(), storeList);
         grid = (GridView) view.findViewById(R.id.gridview1);
         grid.setAdapter(adapter);

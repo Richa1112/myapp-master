@@ -7,23 +7,17 @@ package com.example.aditya.discountfeed;
 public class StoreModel {
 
     String storeName;
-    int image;
-    boolean isFav;
+    String imageUrl;
+    String url;
     String id;
+    boolean isFav;
 
-    public StoreModel(String storeName, int image, boolean isFav, String id) {
+    public StoreModel(String storeName, String imageUrl, String url, String id, boolean isFav) {
         this.storeName = storeName;
-        this.image = image;
+        this.imageUrl = imageUrl;
+        this.url = url;
+        this.id = id;
         this.isFav = isFav;
-        this.id = id;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getStoreName() {
@@ -34,12 +28,28 @@ public class StoreModel {
         this.storeName = storeName;
     }
 
-    public int getImage() {
-        return image;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public boolean isFav() {

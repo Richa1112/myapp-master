@@ -14,12 +14,12 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Thread myThread = new Thread(){
+        Thread myThread = new Thread() {
             @Override
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

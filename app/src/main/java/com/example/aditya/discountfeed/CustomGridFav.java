@@ -5,6 +5,8 @@ package com.example.aditya.discountfeed;
  */
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -77,21 +81,19 @@ public class CustomGridFav extends BaseAdapter {
             //      TextView textView = (TextView) grid.findViewById(R.id.grid_text);
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             //    textView.setText(web[position]);
-            imageView.setImageResource(storeData.image);
+            Picasso.with(mContext).load(storeData.imageUrl).into(imageView);
 
 
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                                    Toast.makeText(mContext, "You Clicked at " + storeList.get(position).getStoreName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "You Clicked at " + storeList.get(position).getStoreName(), Toast.LENGTH_SHORT).show();
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(storeList.get(position).url));
+                    mContext.startActivity(browserIntent);
 
                 }
             });
-
-
-
-
 
 
         } else {

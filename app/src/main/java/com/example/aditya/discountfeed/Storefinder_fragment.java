@@ -15,20 +15,12 @@ import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Storefinder_fragment extends Fragment  {
+public class Storefinder_fragment extends Fragment {
 
     int PLACE_PICKER_REQUEST = 1;
 
@@ -51,19 +43,15 @@ public class Storefinder_fragment extends Fragment  {
     }
 
 
-
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == Activity.RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, getActivity());
-                //locationButton.setText(String.format("Place: %s", place.getName()));
                 String toastMsg = String.format("Place: %s", place.getName());
                 Toast.makeText(getContext(), toastMsg, Toast.LENGTH_LONG).show();
             }
         }
     }
-
 }
