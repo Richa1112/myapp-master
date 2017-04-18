@@ -32,9 +32,9 @@ public class StoreController {
             storeListAtInit.add(new StoreModel ("biglot1", R.drawable.biglots , false, "4")) ;
             storeListAtInit.add(new StoreModel ("biglot2", R.drawable.biglots , false, "5")) ;
             storeListAtInit.add(new StoreModel ("biglot3", R.drawable.biglots , false, "6")) ;
-            storeListAtInit.add(new StoreModel ("biglot3", R.drawable.biglots , false, "7")) ;
-            storeListAtInit.add(new StoreModel ("biglot3", R.drawable.biglots , false, "8")) ;
-            storeListAtInit.add(new StoreModel ("biglot3", R.drawable.biglots , false, "9")) ;
+            storeListAtInit.add(new StoreModel ("biglot4", R.drawable.biglots , false, "7")) ;
+            storeListAtInit.add(new StoreModel ("biglot5", R.drawable.biglots , false, "8")) ;
+            storeListAtInit.add(new StoreModel ("biglot6", R.drawable.biglots , false, "9")) ;
 //            StoreModel
             instance = new  StoreController();
             instance.storeList = storeListAtInit;

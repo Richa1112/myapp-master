@@ -2,28 +2,50 @@ package com.example.aditya.discountfeed;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyLocation_fragment extends Fragment {
+public class MyLocation_fragment extends Fragment implements OnMapReadyCallback {
 
-
-    public MyLocation_fragment() {
-        // Required empty public constructor
-    }
-
-
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.my_location_fragment, container, false);
+        return inflater.inflate(R.layout.storefinder_fragment, container, false);
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SupportMapFragment fragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        fragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        LatLng marker = new LatLng(37.478633, -121.923939);
+        googleMap.addMarker(new MarkerOptions().title("home").position(marker));
+        CameraUpdate point = CameraUpdateFactory.newLatLng(new LatLng(37.478633, -121.923939));
+
+// moves camera to coordinates
+        googleMap.moveCamera(point);
+// animates camera to coordinates
+        googleMap.animateCamera(point);
+    }
 }
+
